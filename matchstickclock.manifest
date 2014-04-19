@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Specification-Title: MatchstickClock
+Specification-Version: 1.0
+Implementation-Vendor: bartold.com - Thom Bartold
+Main-Class: com.bartold.tools.MatchstickClock
+Created-By: 1.3.0 (Sun Microsystems Inc.)

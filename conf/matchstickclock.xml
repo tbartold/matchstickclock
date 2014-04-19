@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (c) 2004 Sun Microsystems, Inc. All rights reserved. Use is
+subject to license terms.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the Lesser GNU General Public License as
+published by the Free Software Foundation; either version 2 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA
+-->
+
+<!--
+  - xscreensaver-style configuration file for Match Stick Clock screen saver.
+  -->
+<screensaver name="matchstickclock" _label="Matchstick Clock (Java)">
+
+  <command arg="-root"/>
+
+  <command arg="-jar matchstickclock.jar"/>
+
+  <command arg="-class com.bartold.tools.MatchstickClockSaver"/>
+
+  <file id="jdkhome" _label="Java Home (blank=auto)" arg="-jdkhome %" />
+
+  <select id="hires">
+    <option id="hirestrue"  _label="smooth movements" arg-set="-hires 1" /> <!-- first option is default -->
+    <option id="hiresfalse" _label="slamming numbers" arg-set="-hires 0" />
+  </select>
+
+  <select id="color">
+    <option id="colortrue"  _label="add color" arg-set="-color 1" /> 
+    <option id="colorfalse" _label="white hands" arg-set="-color 0" />
+  </select>
+
+  <select id="wilds">
+    <option id="wildsfalse" _label="single color" arg-set="-color 0" />
+    <option id="wildstrue"  _label="colorfulness" arg-set="-color 1" /> 
+  </select>
+
+  <select id="pause">
+    <option id="pausetrue"  _label="slow color change" arg-set="-pause 1" /> <!-- default -->
+    <option id="pausefalse" _label="warning epileptic" arg-set="-pause 0" />
+  </select>
+
+  <select id="obvious">
+    <option id="obviousfalse" _label="keep the clock challenging" arg-set="-obvious 0" />
+    <option id="obvioustrue"  _label="make the current time obvious" arg-set="-obvious 1" /> 
+  </select>
+  
+  <select id="round">
+    <option id="roundtrue"  _label="make the clock round" arg-set="-round 1" /> <!-- default -->
+    <option id="roundfalse" _label="use the original linear clock" arg-set="-round 0" />
+  </select>
+
+  <select id="fixed">
+    <option id="fixedfalse" _label="rotate so current time is at the right" arg-set="-fixed 0" />
+    <option id="fixedtrue"  _label="make the rings fixed" arg-set="-fixed 1" /> 
+  </select>
+
+  <_description>
+A clock made out of matchsticks? No, but it looks like that.
+The clock is made up of a thousand rotating clock hands, some of them go faster than others.
+  </_description>
+
+</screensaver>

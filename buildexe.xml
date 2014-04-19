@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="create_run_jar" name="Create Runnable Jar for Project clock with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <delete dir="dist/matchstickclock"/>
+        <mkdir dir="dist/matchstickclock"/>
+        <jar destfile="dist/matchstickclock/matchstickclock.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.bartold.tools.MatchstickClock"/>
+                <attribute name="Class-Path" value="*"/>
+            </manifest>
+            <fileset dir="bin"/>
+        </jar>
+        <copy file="lib/saverbeans-api.jar" todir="dist/matchstickclock"/>
+    </target>
+</project>
